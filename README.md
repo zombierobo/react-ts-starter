@@ -1,44 +1,23 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react-ts-starter
 
-## Available Scripts
+[Create React App](https://github.com/facebook/create-react-app) does not have a few build steps which are necessary such as linting files, configuring prettier and enabling coverage reports
+
+## Additional Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `yarn lint`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs all the linting steps for files in src folder with extensions js, jsx, ts, tsx, json, css and scss.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### `yarn lint:fix`
 
-### `yarn test`
+Runs lint command with --fix flag which tries to automatically fix the lint problems.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### How does it work
 
-### `yarn build`
+I have used the following references for setting up this project
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- linting typescript, javascript, tsx and jsx - [Using ESLint and Prettier in a TypeScript Project](https://dev.to/robertcoopercode/using-eslint-and-prettier-in-a-typescript-project-53jb)
+- linting css and scss - [styelint](https://stylelint.io/)
+  - By default stylelint does not work well with prettier. To fix this problem we use recommended configuration from [stylelint-prettier](https://github.com/prettier/stylelint-prettier)
