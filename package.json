@@ -34,7 +34,10 @@
     "lint:fix": "yarn lint:js --fix && yarn lint:css --fix",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false",
+    "test:watch": "react-scripts test",
+    "coverage": "yarn test --collect-coverage",
+    "coverage:watch": "yarn test:watch --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -50,6 +53,20 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 75,
+        "functions": 75,
+        "lines": 75,
+        "statements": 75
+      }
+    },
+    "coverageReporters": [
+      "text",
+      "html"
     ]
   }
 }

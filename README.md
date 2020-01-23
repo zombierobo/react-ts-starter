@@ -14,6 +14,18 @@ Runs all the linting steps for files in src folder with extensions js, jsx, ts, 
 
 Runs lint command with --fix flag which tries to automatically fix the lint problems.
 
+### `yarn test:watch`
+
+Runs tests in watch mode
+
+### `yarn coverage`
+
+Runs test cases with --collect-coverage flag. You can set minimum code coverage limits in jest.coverageThreshold.global property in package.json
+
+### `yarn coverage:watch`
+
+Runs coverage in watch mode
+
 ### How does it work
 
 I have used the following references for setting up this project
